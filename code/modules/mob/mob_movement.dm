@@ -353,7 +353,7 @@
 								M.other_mobs = null
 								M.animate_movement = 2
 								return
-
+					G.adjust_position()
 		else
 			if(mob.confused)
 				switch(mob.m_intent)
@@ -369,7 +369,7 @@
 
 		for (var/obj/item/grab/G in mob)
 			if (G.assailant_reverse_facing())
-				mob.set_dir(reverse_dir[direct])
+				mob.set_dir(GLOB.reverse_dir[direct])
 			G.assailant_moved()
 		for (var/obj/item/grab/G in mob.grabbed_by)
 			G.adjust_position()
